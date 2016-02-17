@@ -1,7 +1,6 @@
 # EnrichAssignments
 
 #include<stdio.h>
-#include<math.h>
 int thousans(int );
 int thousan(int );
 int thou(int );
@@ -20,6 +19,7 @@ int main()
   		ones=n%10;
   		n=n/10;
   		tens=n%10;
+  		
   		n=n/10;
   		hundreds=n%10;
   		n=n/10;
@@ -36,15 +36,17 @@ int main()
   			thou(thousands);
   		}
   		hundrds(hundreds);
-  		if(tes!=1)
+  		if(tens==1)
+  		{
+   			ten(ones);
+  		}
+  		
+  		if(tens!=1)
   		{
    			tes(tens);
    			ons(ones);
   		}
-  		if(tes==1)
-  		{
-   			ten(ones);
-  		}
+  		
  	}
  	else
  	{
