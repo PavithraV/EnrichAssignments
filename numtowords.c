@@ -50,7 +50,7 @@ int main()
  	}
  	else
  	{
- 		printf("Number limit exceeded\n");
+ 		printf("Limit exceeded\n");
  	}
 	return 0;
 }
