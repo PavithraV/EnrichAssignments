@@ -74,11 +74,11 @@ int thousans(int x , int y)
  	printf("Eighty ");
  	if(x==9)
  	printf("Ninety ");
- 	return 0;
  	if(y!=0)
 	{
 		printf("and");
 	}
+	return 0;
 }
 
 
@@ -104,11 +104,11 @@ int thousan(int x, int y)
  	printf("Eighteen Thousand ");
  	if(x==9)
  	printf("Nineteen Thousand ");
- 	return 0;
  	if(y!=0)
 	{
 		printf("and");
 	}
+	return 0;
 }
 
 
