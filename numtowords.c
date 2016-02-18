@@ -1,10 +1,10 @@
 # EnrichAssignments
 
 #include<stdio.h>
-int thousans(int );
-int thousan(int );
-int thou(int );
-int hundrds(int );
+int thousans(int , int);
+int thousan(int , int );
+int thou(int , int );
+int hundrds(int , int );
 int tes(int );
 int ten(int );
 int ons(int );
@@ -28,14 +28,14 @@ int main()
   		tenthousands=n%10;
   		if(tenthousands==1)
   		{
-  			thousan(thousands);
+  			thousan(thousands , hundreds);
   		}
   		else
   		{
-  			thousans(tenthousands);
-  			thou(thousands);
+  			thousans(tenthousands , hundreds);
+  			thou(thousands , hundreds);
   		}
-  		hundrds(hundreds);
+  		hundrds(hundreds , tens);
   		if(tens==1)
   		{
    			ten(ones);
@@ -56,7 +56,7 @@ int main()
 }
 
 
-int thousans(int x)
+int thousans(int x , int y)
 {
 	if(x==2)
  	printf("Twenty ");
@@ -75,10 +75,14 @@ int thousans(int x)
  	if(x==9)
  	printf("Ninety ");
  	return 0;
+ 	if(y!=0)
+	{
+		printf("and");
+	}
 }
 
 
-int thousan(int x)
+int thousan(int x, int y)
 {
  	if(x==0)
  	printf("Ten Thousand ");
@@ -101,10 +105,14 @@ int thousan(int x)
  	if(x==9)
  	printf("Nineteen Thousand ");
  	return 0;
+ 	if(y!=0)
+	{
+		printf("and");
+	}
 }
 
 
-int thou(int x)
+int thou(int x,int y)
 {
  	if(x!=0)
  	{
@@ -126,12 +134,16 @@ int thou(int x)
   		printf("Eight Thousand ");
   		if(x==9)
   		printf("Nine Thousand ");
+  		if(y!=0)
+		{
+			printf("and ");
+		}
  	}
 	return 0;
 }
 
 
-int hundrds(int x)
+int hundrds(int x,int y)
 {
  	if(x!=0)
  	{
@@ -153,6 +165,10 @@ int hundrds(int x)
   		printf("Eight Hundred ");
   		if(x==9)
   		printf("Nine Hundred ");
+  		if(y!=0)
+  		{
+  			printf("and ");
+  		}
  	}
 	return 0;
 }
