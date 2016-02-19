@@ -1,29 +1,27 @@
 #include<stdio.h>
 int main()
 {
-	int n,temp,sum,rem;
+	int a,n,temp,sum,rem;
 	scanf("%d",&n);
-	while(n++)
+	temp=n;
+	while(temp++)
 	{
-		temp=n;
+		a=temp;
 		sum=0;
-		while(n>0)
+		while(a>0)
 		{
-			rem=n%10;
+			rem=a%10;
 			sum=sum*10+rem;
-			n=n/10;
+			a=a/10;
 		}
+
 		if(sum==temp)
 		{
 			printf("%d is a palindrome",sum);
 			break;
 		}
-		else
-		{
-			continue;
-		}
+
 	}
-}
 
 	
 	return 0;
