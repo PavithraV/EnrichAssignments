@@ -13,10 +13,10 @@ int main()
 {
     int sum=0;
     struct node *root         = newNode(20);
-    root->left     		        = newNode(10);
+    root->left     	      = newNode(10);
     root->right               = newNode(15);
     root->right->left         = newNode(10);
-  	root->left->left		      = newNode(7);
+    root->left->left          = newNode(7);
     root->left->right         = newNode(13);
    
     lsum(root,&sum);
@@ -58,6 +58,6 @@ int lsum(struct node *root,int* sum)
     	*sum += root->left->data;
     }
     sum=sum+ lsum(root->left,sum);
-		sum=sum+lsum(root->right,sum);
+    sum=sum+lsum(root->right,sum);
    return 0;
 }
